@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS gvm_cars (
+  id SERIAL PRIMARY KEY,
+  user_id INT REFERENCES gvm_users(id),
+  make VARCHAR(64),
+  model VARCHAR(64),
+  year INT,
+  vin VARCHAR(64),
+  plate VARCHAR(32),
+  engine_volume NUMERIC(3,1),
+  power INT,
+  fuel_type VARCHAR(32),
+  transmission VARCHAR(32),
+  drive_type VARCHAR(32),
+  mileage INT DEFAULT 0,
+  last_oil_change_km INT,
+  last_oil_change_date DATE,
+  tire_season VARCHAR(16),
+  tire_size VARCHAR(32),
+  battery_voltage_start NUMERIC(4,2),
+  battery_voltage_stop NUMERIC(4,2),
+  photo_url TEXT,
+  updated_at TIMESTAMP DEFAULT NOW()
+)
