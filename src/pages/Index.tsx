@@ -1,4 +1,9 @@
-import { useState, useEffect } from "react";
+// Redirects to Home — main app is in App.tsx
+import Home from "./Home";
+export default Home;
+
+ 
+import { useState as _useState, useEffect as _useEffect } from "react";
 import Icon from "@/components/ui/icon";
 
 type Screen = "home" | "finance" | "trips" | "parts" | "intervals" | "stats" | "owners" | "settings";
